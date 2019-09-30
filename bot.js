@@ -7,8 +7,10 @@ class EchoBot extends ActivityHandler {
     constructor() {
         super();
         // See https://aka.ms/about-bot-activity-message to learn more about the message and other activity types.
+        // hello how are you
+        // you are how hello
         this.onMessage(async (context, next) => {
-            await context.sendActivity(context.activity.text.reverse());
+            await context.sendActivity(context.activity.text.split('').reverse().join(''));
 
             // By calling next() you ensure that the next BotHandler is run.
             await next();
