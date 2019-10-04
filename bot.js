@@ -9,6 +9,7 @@ class EchoBot extends ActivityHandler {
         // See https://aka.ms/about-bot-activity-message to learn more about the message and other activity types.
         // hello how are you
         // you are how hello
+        //Reverse the message passed
         this.onMessage(async (context, next) => {
             await context.sendActivity(context.activity.text.split('').reverse().join(''));
 
